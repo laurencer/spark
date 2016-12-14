@@ -93,8 +93,10 @@
     <module>common/tags</module>
     <module>core</module>
     <module>graphx</module>
+    <!-- Skipping because they break the build
     <module>mllib</module>
     <module>mllib-local</module>
+    -->
     <module>tools</module>
     <module>streaming</module>
     <module>sql/catalyst</module>
@@ -2495,6 +2497,17 @@
       <properties>
         <hadoop.version>2.4.1</hadoop.version>
         <jets3t.version>0.9.3</jets3t.version>
+      </properties>
+    </profile>
+
+    <profile>
+      <id>cdh-5.3.8</id>
+      <properties>
+          <hadoop.version>2.5.0-cdh5.3.8</hadoop.version>
+          <protobuf.version>2.5.0</protobuf.version>
+          <jets3t.version>0.9.0</jets3t.version>
+          <commons.math3.version>3.1.1</commons.math3.version>
+          <avro.mapred.classifier>hadoop2</avro.mapred.classifier>
       </properties>
     </profile>
 
